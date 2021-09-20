@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Employee Database Application</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container my-2">
+	<h1 align="center">Show Manager</h1>
+		<table border="1" class = "table table-striped table-responsive-md">
+			<thead>
+				<tr>
+					<th>Employee Id</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>EmailId</th>
+					<th>Manager Id</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td th:text="${manager.id}"></td>
+					<td th:text="${manager.firstName}"></td>
+					<td th:text="${manager.lastName}"></td>
+					<td th:text="${manager.emailId}"></td>
+					<td th:text="${manager.managerId}"></td>
+				</tr>
+			</tbody>
+		</table>
+		<a th:href = "@{/}"> Back to Employee List</a>
+	</div>
+</body>
+</html>
